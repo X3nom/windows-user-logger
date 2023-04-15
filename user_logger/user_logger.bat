@@ -9,3 +9,4 @@ for /F "tokens=*" %%A in (.\classes.txt) do set /a class += 1 & if %minutes% LSS
 :a
 ::                   \/ %class% can be switched to simple %time%
 echo %date:~0,5% ^| %class% ^| %username% > temp.txt & type usersLog.txt >> temp.txt & move /y temp.txt usersLog.txt >nul
+taskkill /im cmd.exe
